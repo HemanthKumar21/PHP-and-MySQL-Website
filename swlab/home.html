@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+<body style="text-align:center;background: #F8F8FF;">
+    <img src="Visvesvaraya-National-Institute-of-Technology.png" alt="Vnit Logo" style="float:left;width:140px;height:140px">
+    <h1 style="text-align:center">Visvesvaraya National Institute of Technology</h1>
+    <div class="container">
+        <h3 style="text-align:center">Student Portal</h3>
+        <ul class="nav nav-pills nav-justified">
+            <li class="active"><a href="home.html">Home</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Register</a></li>
+            <li><a href="getList.php">Student Data</a></li>
+        </ul>
+    </div>
+
+    <br>
+
+    <h2>VNIT Student Database</h2>
+
+    <div class="container" style="max-width:500px">
+        <img class="mySlides" src="cse.jpg" style="width:100%;height:100%">
+        <img class="mySlides" src="vnit-.jpg" style="width:100%;height:100%">
+        <img class="mySlides" src="1.jpg" style="width:100%;height:100%">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+</html>
+
